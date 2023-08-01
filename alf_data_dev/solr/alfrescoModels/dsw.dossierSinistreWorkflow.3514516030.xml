@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.alfresco.org/model/dictionary/1.0" name="dsw:dossierSinistreWorkflow">
+    <description>Sample Document Model</description>
+    <author>My Name</author>
+    <version>1.0</version>
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <import uri="http://www.alfresco.org/model/bpm/1.0" prefix="bpm"/>
+    </imports>
+    <namespaces>
+        <namespace uri="http://www.addinn.com/model/dossierSinistreWorkflow/1.0" prefix="dsw"/>
+    </namespaces>
+    <data-types/>
+    <constraints/>
+    <types>
+        <type name="dsw:creationdossierSinistre">
+            <title>creation dossier sinistre</title>
+            <parent>bpm:startTask</parent>
+            <properties/>
+            <associations/>
+            <overrides/>
+            <mandatory-aspects>
+                <aspect>cm:geographic</aspect>
+            </mandatory-aspects>
+        </type>
+    </types>
+    <aspects/>
+</model>

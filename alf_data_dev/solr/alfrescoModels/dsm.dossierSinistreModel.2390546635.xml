@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.alfresco.org/model/dictionary/1.0" name="dsm:dossierSinistreModel">
+    <description>Sample Document Model</description>
+    <author>My Name</author>
+    <version>1.0</version>
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <import uri="http://www.alfresco.org/model/system/1.0" prefix="sys"/>
+    </imports>
+    <namespaces>
+        <namespace uri="http://www.addinn.com/model/dossierSinistreModel/1.0" prefix="dsm"/>
+    </namespaces>
+    <data-types/>
+    <constraints/>
+    <types/>
+    <aspects/>
+</model>

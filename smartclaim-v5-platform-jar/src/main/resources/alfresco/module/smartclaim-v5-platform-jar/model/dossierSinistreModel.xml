@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="dsm:dossierSinistreModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+	<!-- Optional meta-data about the model -->
+	<description>Sample Document Model</description>
+	<author>My Name</author>
+	<version>2.0</version>
+
+	<imports>
+		<!-- Import Alfresco Dictionary Definitions -->
+		<import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+		<!-- Import Alfresco Content Domain Model Definitions -->
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+		<!-- Import Alfresco System Model Definitions -->
+		<import uri="http://www.alfresco.org/model/system/1.0" prefix="sys" />
+		<!-- import constat numerique model definitions-->
+
+	</imports>
+
+	<!-- Custom namespace for the ACME company -->
+	<namespaces>
+		<namespace uri="http://www.addinn.com/model/dossierSinistreModel/1.0" prefix="dsm" />
+	</namespaces>
+	<aspects>
+		<aspect name="dsm:informationDossierAssure">
+			<properties>
+				<property name="dsm:idDossier">
+					<type>d:int</type>
+
+					<index enabled="true">
+						<tokenised>false</tokenised>
+						<facetable>false</facetable>
+					</index>
+				</property>
+				<property name="dsm:agentAffecte">
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+						<facetable>false</facetable>
+					</index>
+				</property>
+				<property name="dsm:refAssure">
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+						<facetable>false</facetable>
+					</index>
+				</property>
+				<property name="dsm:statutDossier">
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+						<facetable>false</facetable>
+					</index>
+				</property>
+				<property name="dsm:compagnieDassurance">
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+						<facetable>false</facetable>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+		<aspect name="dsm:constat">
+			<associations>
+
+				<association name="dsm:constat">
+					<source>
+						<mandatory>false</mandatory>
+						<many>false</many>
+					</source>
+					<target>
+						<class>cm:content</class>
+						<mandatory>true</mandatory>
+						<many>false</many>
+					</target>
+				</association>
+
+			</associations>
+		</aspect>
+		<aspect name="dsm:attestationAssurance">
+			<associations>
+
+				<association name="dsm:attestationAssurance">
+					<source>
+						<mandatory>false</mandatory>
+						<many>false</many>
+					</source>
+					<target>
+						<class>cm:content</class>
+						<mandatory>true</mandatory>
+						<many>false</many>
+					</target>
+				</association>
+
+			</associations>
+		</aspect>
+		<aspect name="dsm:videoSinistre">
+			<associations>
+
+				<association name="dsm:videoSinistre">
+					<source>
+						<mandatory>false</mandatory>
+						<many>false</many>
+					</source>
+					<target>
+						<class>cm:content</class>
+						<mandatory>true</mandatory>
+						<many>false</many>
+					</target>
+				</association>
+
+			</associations>
+		</aspect>
+		<aspect name="dsm:imageDegat">
+			<associations>
+
+				<association name="dsm:imageDegat">
+					<source>
+						<mandatory>false</mandatory>
+						<many>false</many>
+					</source>
+					<target>
+						<class>cm:content</class>
+						<mandatory>true</mandatory>
+						<many>true</many>
+					</target>
+				</association>
+
+			</associations>
+		</aspect>
+	</aspects>
+
+</model>

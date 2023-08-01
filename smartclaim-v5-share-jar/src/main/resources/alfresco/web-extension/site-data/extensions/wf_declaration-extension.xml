@@ -1,0 +1,356 @@
+<extension>
+    <modules>
+        <module>
+            <id>declaration dossier</id>
+            <version>1.0</version>
+            <auto-deploy>true</auto-deploy>
+            <configurations>
+                <config evaluator="string-compare" condition="activiti$smartClaim">
+                    <forms>
+                        <form>
+                            <field-visibility>
+
+                                <show id="dsw:imageDegat" />
+                                <show id="dsw:videoSinistre" />
+                                <show id="dsw:attestationAssurance" />
+                                <show id="dsw:constat" />
+                                <show id="cm:longitude" />
+                                <show id="cm:latitude" />
+                                <show id="bpm:workflowDescription" />
+                                <show id="bpm:comment" />
+                                <show id="packageItems" />
+
+
+                            </field-visibility>
+                            <appearance>
+
+
+                                <set id="imageDegat" appearance="title" template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="image des degats" />
+
+                                <set id="videoSinistre" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="video sinistre" />
+
+                                <set id="attestationAssurance" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="attestation assurance" />
+
+                                <set id="constat" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="constat" />
+                                <set id="position" appearance="title" label="position"
+                                     template="/org/alfresco/components/form/2-column-set.ftl" />
+
+                                <set id="items" appearance="title" label="items" />
+                                <set id="comment" appearance="title" label="comment" />
+
+                                <field id="dsw:constat" label="constat" set="constat" />
+                                <field id="dsw:attestationAssurance" label="attestation d'assurance" set="attestationAssurance" />
+                                <field id="dsw:videoSinistre" label="video sinistre" set="videoSinistre" />
+                                <field id="dsw:imageDegat" label="images des degats" set="imageDegat" />
+                                <field id="cm:longitude" label="position" set="position" />
+                                <field id="cm:latitude" label="position" set="position" />
+                                <field id="bpm:workflowDescription" label-id="workflow.field.message">
+                                    <control template="/org/alfresco/components/form/controls/textarea.ftl">
+                                        <control-param name="style">width: 95%</control-param>
+                                    </control>
+                                </field>
+                                <field id="packageItems" set="items"></field>
+                                <field id="bpm:comment" set="comment" />
+
+
+                            </appearance>
+                        </form>
+                    </forms>
+                </config>
+                <config evaluator="task-type" condition="dsw:affecterDossierSinistre">
+                    <forms>
+                        <form>
+                            <field-visibility>
+
+                                <show id="dsw:imageDegat" />
+                                <show id="dsw:videoSinistre" />
+                                <show id="dsw:attestationAssurance" />
+                                <show id="dsw:constat" />
+                                <show id="cm:longitude" />
+                                <show id="cm:latitude" />
+                                <show id="bpm:workflowDescription" />
+                                <show id="bpm:comment" />
+                                <show id="dsw:agent" />
+                                <show id="packageItems" />
+                                <show id="dsw:transitionOutcome" />
+
+                            </field-visibility>
+                            <appearance>
+
+
+                                <set id="imageDegat" appearance="title" template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="image des degats" />
+
+                                <set id="videoSinistre" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="video sinistre" />
+
+                                <set id="attestationAssurance" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="attestation assurance" />
+
+                                <set id="constat" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="constat" />
+                                <set id="position" appearance="title" label="position"
+                                     template="/org/alfresco/components/form/2-column-set.ftl" />
+                                <set id="agent" appearance="title" label="affecter un agent" />
+                                <set id="items" appearance="title" label="items" />
+                                <set id="comment" appearance="title" label="comment" />
+
+                                <set id="response" appearance="title" label="reponse"
+                                     template="/org/alfresco/components/form/2-column-set.ftl" />
+
+
+                                <field id="dsw:constat" label="constat" set="constat" />
+                                <field id="dsw:attestationAssurance" label="attestation d'assurance" set="attestationAssurance" />
+                                <field id="dsw:videoSinistre" label="video sinistre" set="videoSinistre" />
+                                <field id="dsw:imageDegat" label="images des degats" set="imageDegat" />
+                                <field id="cm:longitude" label="position" set="position" />
+                                <field id="cm:latitude" label="position" set="position" />
+                                <field id="bpm:workflowDescription" label-id="workflow.field.message">
+                                    <control template="/org/alfresco/components/form/controls/textarea.ftl">
+                                        <control-param name="style">width: 95%</control-param>
+                                    </control>
+                                </field>
+                                <field id="dsw:agent" label="affecter un agent" set="agent"/>
+                                <field id="packageItems" set="items"></field>
+                                <field id="bpm:comment" set="comment" />
+                                <field id="dsw:transitionOutcome" label-id="workflow.field.outcome"
+                                       set="response">
+                                    <control
+                                            template="/com/addinn/recouvrement/components/form/controls/workflow/customActiviti-transitions.ftl" />
+                                </field>
+
+
+                            </appearance>
+                        </form>
+                    </forms>
+                </config>
+                <config evaluator="task-type" condition="dsw:saisieConstatNumerique">
+                    <forms>
+                        <form>
+                            <field-visibility>
+
+                                <show id="dsw:imageDegat" />
+                                <show id="dsw:videoSinistre" />
+                                <show id="dsw:attestationAssurance" />
+                                <show id="dsw:constat" />
+                                <show id="cm:longitude" />
+                                <show id="cm:latitude" />
+                                <show id="bpm:workflowDescription" />
+                                <show id="bpm:comment" />
+                                <show id="dsw:agent" />
+                                <show id="packageItems" />
+                                <show id="dsw:decisionConstatNumeriqueOutcome" />
+
+                            </field-visibility>
+                            <appearance>
+
+
+                                <set id="imageDegat" appearance="title" template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="image des degats" />
+
+                                <set id="videoSinistre" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="video sinistre" />
+
+                                <set id="attestationAssurance" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="attestation assurance" />
+
+                                <set id="constat" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="constat" />
+                                <set id="position" appearance="title" label="position"
+                                     template="/org/alfresco/components/form/2-column-set.ftl" />
+                                <set id="agent" appearance="title" label="affecter un agent" />
+                                <set id="items" appearance="title" label="items" />
+                                <set id="comment" appearance="title" label="comment" />
+
+                                <set id="response" appearance="title" label="reponse"
+                                     template="/org/alfresco/components/form/2-column-set.ftl" />
+
+
+                                <field id="dsw:constat" label="constat" set="constat" />
+                                <field id="dsw:attestationAssurance" label="attestation d'assurance" set="attestationAssurance" />
+                                <field id="dsw:videoSinistre" label="video sinistre" set="videoSinistre" />
+                                <field id="dsw:imageDegat" label="images des degats" set="imageDegat" />
+                                <field id="cm:longitude" label="position" set="position" />
+                                <field id="cm:latitude" label="position" set="position" />
+                                <field id="bpm:workflowDescription" label-id="workflow.field.message">
+                                    <control template="/org/alfresco/components/form/controls/textarea.ftl">
+                                        <control-param name="style">width: 95%</control-param>
+                                    </control>
+                                </field>
+                                <field id="dsw:agent" label="affecter un agent" set="agent"/>
+                                <field id="packageItems" set="items"></field>
+                                <field id="bpm:comment" set="comment" />
+                                <field id="dsw:decisionConstatNumeriqueOutcome" label-id="workflow.field.outcome"
+                                       set="response">
+                                    <control
+                                            template="/com/addinn/recouvrement/components/form/controls/workflow/customActiviti-transitions.ftl" />
+                                </field>
+
+
+                            </appearance>
+                        </form>
+                    </forms>
+                </config>
+                <config evaluator="task-type" condition="dsw:validerConstatNumerique">
+                    <forms>
+                        <form>
+                            <field-visibility>
+
+                                <show id="dsw:imageDegat" />
+                                <show id="dsw:videoSinistre" />
+                                <show id="dsw:attestationAssurance" />
+                                <show id="dsw:constat" />
+                                <show id="cm:longitude" />
+                                <show id="cm:latitude" />
+                                <show id="bpm:workflowDescription" />
+                                <show id="bpm:comment" />
+                                <show id="dsw:assure" />
+                                <show id="dsw:agent" />
+                                <show id="packageItems" />
+                                <show id="dsw:transitionOutcome" />
+
+                            </field-visibility>
+                            <appearance>
+
+
+                                <set id="imageDegat" appearance="title" template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="image des degats" />
+
+                                <set id="videoSinistre" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="video sinistre" />
+
+                                <set id="attestationAssurance" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="attestation assurance" />
+
+                                <set id="constat" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="constat" />
+                                <set id="position" appearance="title" label="position"
+                                     template="/org/alfresco/components/form/2-column-set.ftl" />
+                                <set id="agent" appearance="title" label="affecter un agent" />
+                                <set id="assure" appearance="title" label="affecter un assure" />
+                                <set id="items" appearance="title" label="items" />
+                                <set id="comment" appearance="title" label="comment" />
+
+                                <set id="response" appearance="title" label="reponse"
+                                     template="/org/alfresco/components/form/2-column-set.ftl" />
+
+
+                                <field id="dsw:constat" label="constat" set="constat" />
+                                <field id="dsw:attestationAssurance" label="attestation d'assurance" set="attestationAssurance" />
+                                <field id="dsw:videoSinistre" label="video sinistre" set="videoSinistre" />
+                                <field id="dsw:imageDegat" label="images des degats" set="imageDegat" />
+                                <field id="cm:longitude" label="position" set="position" />
+                                <field id="cm:latitude" label="position" set="position" />
+                                <field id="bpm:workflowDescription" label-id="workflow.field.message">
+                                    <control template="/org/alfresco/components/form/controls/textarea.ftl">
+                                        <control-param name="style">width: 95%</control-param>
+                                    </control>
+                                </field>
+                                <field id="dsw:agent" label="affecter un agent" set="agent"/>
+                                <field id="dsw:assure" label="affecter un assure" set="assure"/>
+                                <field id="packageItems" set="items"></field>
+                                <field id="bpm:comment" set="comment" />
+                                <field id="dsw:transitionOutcome" label-id="workflow.field.outcome"
+                                       set="response">
+                                    <control
+                                            template="/com/addinn/recouvrement/components/form/controls/workflow/customActiviti-transitions.ftl" />
+                                </field>
+
+
+                            </appearance>
+                        </form>
+                    </forms>
+                </config>
+                <config evaluator="task-type" condition="dsw:informationsComplementaires">
+                    <forms>
+                        <form>
+                            <field-visibility>
+
+                                <show id="dsw:imageDegat" />
+                                <show id="dsw:videoSinistre" />
+                                <show id="dsw:attestationAssurance" />
+                                <show id="dsw:constat" />
+                                <show id="cm:longitude" />
+                                <show id="cm:latitude" />
+                                <show id="bpm:workflowDescription" />
+                                <show id="bpm:comment" />
+                                <show id="dsw:agent" />
+                                <show id="dsw:assure" />
+                                <show id="packageItems" />
+                                <show id="dsw:transitionOutcome" />
+
+                            </field-visibility>
+                            <appearance>
+
+
+                                <set id="imageDegat" appearance="title" template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="image des degats" />
+
+                                <set id="videoSinistre" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="video sinistre" />
+
+                                <set id="attestationAssurance" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="attestation assurance" />
+
+                                <set id="constat" appearance="title"
+                                     template="/org/alfresco/components/form/2-column-set.ftl"
+                                     label="constat" />
+                                <set id="position" appearance="title" label="position"
+                                     template="/org/alfresco/components/form/2-column-set.ftl" />
+                                <set id="agent" appearance="title" label="affecter un agent" />
+                                <set id="assure" appearance="title" label="affecter un assure" />
+                                <set id="items" appearance="title" label="items" />
+                                <set id="comment" appearance="title" label="comment" />
+
+                                <set id="response" appearance="title" label="reponse"
+                                     template="/org/alfresco/components/form/2-column-set.ftl" />
+
+
+                                <field id="dsw:constat" label="constat" set="constat" />
+                                <field id="dsw:attestationAssurance" label="attestation d'assurance" set="attestationAssurance" />
+                                <field id="dsw:videoSinistre" label="video sinistre" set="videoSinistre" />
+                                <field id="dsw:imageDegat" label="images des degats" set="imageDegat" />
+                                <field id="cm:longitude" label="position" set="position" />
+                                <field id="cm:latitude" label="position" set="position" />
+                                <field id="bpm:workflowDescription" label-id="workflow.field.message">
+                                    <control template="/org/alfresco/components/form/controls/textarea.ftl">
+                                        <control-param name="style">width: 95%</control-param>
+                                    </control>
+                                </field>
+                                <field id="dsw:assure" label="assure" set="assure"/>
+                                <field id="dsw:agent" label="agent" set="agent"/>
+                                <field id="packageItems" set="items"></field>
+                                <field id="bpm:comment" set="comment" />
+                                <field id="dsw:transitionOutcome" label-id="workflow.field.outcome"
+                                       set="response">
+                                    <control
+                                            template="/com/addinn/recouvrement/components/form/controls/workflow/customActiviti-transitions.ftl" />
+                                </field>
+
+
+                            </appearance>
+                        </form>
+                    </forms>
+                </config>
+            </configurations>
+        </module>
+    </modules>
+</extension>

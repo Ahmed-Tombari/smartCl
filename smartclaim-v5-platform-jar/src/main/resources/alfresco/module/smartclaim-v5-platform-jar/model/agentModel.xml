@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.alfresco.org/model/dictionary/1.0"
+       name="agm:AgentModel">
+    <author>Tombari</author>
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0"
+                prefix="d" />
+        <import uri="http://www.alfresco.org/model/datalist/1.0"
+                prefix="dl" />
+    </imports>
+    <namespaces>
+        <namespace uri="http://www.addinn.com/model/agentModel/1.0"
+                   prefix="agm" />
+    </namespaces>
+
+    <aspects>
+        <aspect name="agm:agent">
+            <title>agent</title>
+            <properties>
+
+                <property name="agm:cin">
+                    <title>cin</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                </property>
+
+                <property name="agm:ville">
+                    <title>ville</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                </property>
+
+                <property name="agm:codePostal">
+                    <title>codePostal</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                </property>
+
+            </properties>
+        </aspect>
+        <aspect name="agm:voitureAssure">
+            <properties>
+
+                <property name="agm:marque">
+                    <title>marque</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                </property>
+
+                <property name="agm:immatriculeVoiture">
+                    <title>codePostal</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                </property>
+
+                <property name="agm:paysImmatriculeVoiture">
+                    <title>codePostal</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                </property>
+
+                <property name="agm:immatriculeRemorque">
+                    <title>codePostal</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                </property>
+
+                <property name="agm:paysImmatriculeRemorque">
+                    <title>codePostal</title>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                </property>
+
+            </properties>
+        </aspect>
+    </aspects>
+
+</model>

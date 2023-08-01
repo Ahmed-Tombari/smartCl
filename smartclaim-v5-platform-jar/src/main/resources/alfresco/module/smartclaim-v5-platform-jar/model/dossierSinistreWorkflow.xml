@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="dsw:dossierSinistreWorkflow" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+    <!-- Optional meta-data about the model -->
+    <description>Sample Document Model</description>
+    <author>My Name</author>
+    <version>1.1</version>
+
+    <imports>
+        <!-- Import Alfresco Dictionary Definitions -->
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+        <!-- Import Alfresco Content Domain Model Definitions -->
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+
+        <import uri="http://www.alfresco.org/model/bpm/1.0"
+                prefix="bpm" />
+    </imports>
+
+    <!-- Custom namespace for the ACME company -->
+    <namespaces>
+        <namespace uri="http://www.addinn.com/model/dossierSinistreWorkflow/1.0" prefix="dsw" />
+    </namespaces>
+    <types>
+        <!--
+            ACME Enterprise-wide Document root type.
+            All other custom document types would extend this one.
+        -->
+        <type name="dsw:creationdossierSinistre">
+            <title>creation dossier sinistre</title>
+            <parent>bpm:startTask</parent>
+
+            <mandatory-aspects>
+                <aspect>cm:geographic</aspect>
+                <aspect>dsw:constat</aspect>
+                <aspect>dsw:attestationAssurance</aspect>
+                <aspect>dsw:videoSinistre</aspect>
+                <aspect>dsw:imageDegat</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="dsw:affecterDossierSinistre">
+            <title>affecter dossier à un agent</title>
+            <parent>bpm:activitiOutcomeTask</parent>
+
+            <mandatory-aspects>
+                <aspect>cm:geographic</aspect>
+                <aspect>dsw:constat</aspect>
+                <aspect>dsw:attestationAssurance</aspect>
+                <aspect>dsw:videoSinistre</aspect>
+                <aspect>dsw:imageDegat</aspect>
+                <aspect>dsw:agent</aspect>
+                <aspect>dsw:transition</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="dsw:saisieConstatNumerique">
+            <title>creer constat numerique</title>
+            <parent>bpm:activitiOutcomeTask</parent>
+            <properties>
+
+                <property name="dsw:decisionConstatNumeriqueOutcome">
+                    <type>d:text</type>
+                    <default>incomplet</default>
+                    <constraints>
+                        <constraint type="LIST" name="dsw:decisionConstatNumeriqueOutcomeList">
+                            <parameter name="allowedValues">
+                                <list>
+                                    <value>invalid</value>
+                                    <value>complet</value>
+                                    <value>incomplet</value>
+                                </list>
+                            </parameter>
+                        </constraint>
+                    </constraints>
+                </property>
+
+            </properties>
+            <overrides>
+                <property name="bpm:packageItemActionGroup">
+                    <default>read_package_item_actions</default>
+                </property>
+                <property name="bpm:outcomePropertyName">
+                    <default>{http://www.addinn.com/model/dossierSinistreWorkflow/1.0}decisionConstatNumeriqueOutcome</default>
+                </property>
+            </overrides>
+
+            <mandatory-aspects>
+                <aspect>cm:geographic</aspect>
+                <aspect>dsw:constat</aspect>
+                <aspect>dsw:attestationAssurance</aspect>
+                <aspect>dsw:videoSinistre</aspect>
+                <aspect>dsw:imageDegat</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="dsw:validerConstatNumerique">
+            <title>valider dossier par assuree</title>
+            <parent>bpm:activitiOutcomeTask</parent>
+
+            <mandatory-aspects>
+                <aspect>cm:geographic</aspect>
+                <aspect>dsw:constat</aspect>
+                <aspect>dsw:attestationAssurance</aspect>
+                <aspect>dsw:videoSinistre</aspect>
+                <aspect>dsw:imageDegat</aspect>
+                <aspect>dsw:assure</aspect>
+                <aspect>dsw:transition</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="dsw:informationsComplementaires">
+            <title>assure remplire les information manquantes</title>
+            <parent>bpm:activitiOutcomeTask</parent>
+
+            <mandatory-aspects>
+                <aspect>cm:geographic</aspect>
+                <aspect>dsw:constat</aspect>
+                <aspect>dsw:attestationAssurance</aspect>
+                <aspect>dsw:videoSinistre</aspect>
+                <aspect>dsw:imageDegat</aspect>
+                <aspect>dsw:assure</aspect>
+                <aspect>dsw:transition</aspect>
+            </mandatory-aspects>
+        </type>
+    </types>
+
+    <aspects>
+        <aspect name="dsw:constat">
+            <associations>
+
+                <association name="dsw:constat">
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>false</many>
+                    </source>
+                    <target>
+                        <class>cm:content</class>
+                        <mandatory>true</mandatory>
+                        <many>false</many>
+                    </target>
+                </association>
+
+            </associations>
+        </aspect>
+        <aspect name="dsw:attestationAssurance">
+            <associations>
+
+                <association name="dsw:attestationAssurance">
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>false</many>
+                    </source>
+                    <target>
+                        <class>cm:content</class>
+                        <mandatory>true</mandatory>
+                        <many>false</many>
+                    </target>
+                </association>
+
+            </associations>
+        </aspect>
+        <aspect name="dsw:videoSinistre">
+            <associations>
+
+                <association name="dsw:videoSinistre">
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>false</many>
+                    </source>
+                    <target>
+                        <class>cm:content</class>
+                        <mandatory>true</mandatory>
+                        <many>false</many>
+                    </target>
+                </association>
+
+            </associations>
+        </aspect>
+        <aspect name="dsw:imageDegat">
+            <associations>
+
+                <association name="dsw:imageDegat">
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>false</many>
+                    </source>
+                    <target>
+                        <class>cm:content</class>
+                        <mandatory>true</mandatory>
+                        <many>true</many>
+                    </target>
+                </association>
+
+            </associations>
+        </aspect>
+        <aspect name="dsw:transition">
+
+            <properties>
+                <property name="dsw:transitionOutcome">
+                    <type>d:text</type>
+                    <default>suivant</default>
+                    <constraints>
+                        <constraint type="LIST" name="dsw:transitionOutcomeList">
+                            <parameter name="allowedValues">
+                                <list>
+                                    <value>suivant</value>
+                                </list>
+                            </parameter>
+                        </constraint>
+                    </constraints>
+                </property>
+
+            </properties>
+            <overrides>
+                <property name="bpm:outcomePropertyName">
+                    <default>{http://www.addinn.com/model/dossierSinistreWorkflow/1.0}transitionOutcome</default>
+                </property>
+            </overrides>
+        </aspect>
+        <aspect name="dsw:agent">
+            <associations>
+
+                <association name="dsw:agent">
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>false</many>
+                    </source>
+                    <target>
+                        <class>cm:person</class>
+                        <mandatory>true</mandatory>
+                        <many>false</many>
+                    </target>
+                </association>
+
+            </associations>
+        </aspect>
+        <aspect name="dsw:assure">
+            <associations>
+
+                <association name="dsw:assure">
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>false</many>
+                    </source>
+                    <target>
+                        <class>cm:person</class>
+                        <mandatory>true</mandatory>
+                        <many>false</many>
+                    </target>
+                </association>
+
+            </associations>
+        </aspect>
+    </aspects>
+</model>
