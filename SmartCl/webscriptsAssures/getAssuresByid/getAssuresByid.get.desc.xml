@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>getAssuresByid</shortname>
+   <description>getAssuresByid</description>
+   <url>/com/addinn/get/getAssuresByid</url>
+   <format default="json"></format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

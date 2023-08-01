@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>upload file</shortname>
+    <description>ajout des fichiers de dossier sinistre</description>
+    <url>/com/addinn/creationdossierassure/uploadfile</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+    
+ </webscript>

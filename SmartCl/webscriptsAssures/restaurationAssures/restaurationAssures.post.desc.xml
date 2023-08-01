@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>restaurationAssures</shortname>
+   <description>restaurationAssures</description>
+   <url>/com/addinn/post/restaurationAssures</url>
+   <format default="json"></format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

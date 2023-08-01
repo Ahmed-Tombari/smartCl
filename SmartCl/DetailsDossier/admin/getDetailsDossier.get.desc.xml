@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>get details dossier</shortname>
+    <description>afficher details dossier</description>
+    <url>/com/addinn/dossier/admin</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+ </webscript>

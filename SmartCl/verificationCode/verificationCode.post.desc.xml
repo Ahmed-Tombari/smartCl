@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>verificationCode</shortname>
+   <description>verificationCode</description>
+   <url>/com/addinn/post/verificationCode</url>
+   <format default="json"></format>
+   <authentication runas="admin">none</authentication>
+   <transaction>required</transaction>
+</webscript>

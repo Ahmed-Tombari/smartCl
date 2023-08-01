@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>updateAssures</shortname>
+   <description>updateAssures</description>
+   <url>/com/addinn/put/updateAssures</url>
+   <format default="json"></format>
+  <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

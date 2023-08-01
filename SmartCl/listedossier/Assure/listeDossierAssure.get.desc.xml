@@ -1,0 +1,10 @@
+<webscript>
+    <shortname>afficher la liste des dossiers d'un assuré</shortname>
+    <description><![CDATA[ Afficher la liste des dossiers d'un assuré trier par date de création <BR> Input <dl>
+        <dt>nomDossier</dt><dd>nodeRef dossier</dd></dl> <BR> output (JSON Data)<dl> <dt>- N° dossier</dt><dt>- statut</dt><dt>- Date de création de dossier</dt></dl> ]]></description>
+    <url>/com/addinn/getListeDossier/Assure</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+    
+ </webscript>

@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>affecter dossier à un agent</shortname>
+    <description>affecter dossier sinistre à un agent de saisie</description>
+    <url>/com/addinn/post/affecterDossier</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+ </webscript>
+ 

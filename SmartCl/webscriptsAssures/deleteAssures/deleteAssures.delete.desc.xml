@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>deleteAssures</shortname>
+   <description>deleteAssures</description>
+   <url>/com/addinn/delete/deleteAssures</url>
+   <format default="json"></format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

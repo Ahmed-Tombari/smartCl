@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>updateAgent</shortname>
+   <description>updateAgent</description>
+   <url>/com/addinn/put/updateAgent</url>
+   <format default="json"></format>
+  <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

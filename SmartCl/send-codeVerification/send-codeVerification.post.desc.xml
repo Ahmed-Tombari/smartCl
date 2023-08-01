@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>send-codeVerification</shortname>
+   <description>send-codeVerification</description>
+   <url>/com/addinn/post/send-codeVerification</url>
+   <format default="json"></format>
+    <authentication runas="admin">none</authentication>
+   <transaction>required</transaction>
+</webscript>

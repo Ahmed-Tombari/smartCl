@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>listeAssures</shortname>
+   <description>listeAssures</description>
+   <url>/com/addinn/get/listeAssures</url>
+   <format default="json"></format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

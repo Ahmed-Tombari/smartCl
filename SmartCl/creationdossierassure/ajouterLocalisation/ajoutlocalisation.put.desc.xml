@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>localisation</shortname>
+    <description>ajout du localisation au dossier sinistre</description>
+    <url>/com/addinn/creationdossierassure/ajouterLocalisation</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+    
+ </webscript>

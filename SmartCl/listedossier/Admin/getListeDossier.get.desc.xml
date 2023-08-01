@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>afficher la liste des dossiers des assurés</shortname>
+    <description>afficher la liste des dossiers des assurés avec pagination et filtrage</description>
+    <url>/com/addinn/getListeDossier/admin</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+ </webscript>

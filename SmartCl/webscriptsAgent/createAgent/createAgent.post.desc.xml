@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>createAgent</shortname>
+   <description>createAgent</description>
+   <url>/com/addinn/post/createAgent</url>
+   <format default="json"></format>
+   <authentication runas="admin">none</authentication>
+   <transaction>required</transaction>
+</webscript>

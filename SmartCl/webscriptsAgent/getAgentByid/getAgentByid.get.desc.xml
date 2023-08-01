@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>getAgentByid</shortname>
+   <description>getAgentByid</description>
+   <url>/com/addinn/get/getAgentByid</url>
+   <format default="json"></format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>lancer le workflow de smartclaim</shortname>
+    <description>lancer le workflow de smartclaim aprés la création du dossier</description>
+    <url>/com/addinn/creationdossierassure/lancerWorkflow</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+    
+ </webscript>

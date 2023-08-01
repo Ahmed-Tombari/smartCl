@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>listeAgent</shortname>
+   <description>listeAgent</description>
+   <url>/com/addinn/get/listeAgent</url>
+   <format default="json"></format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

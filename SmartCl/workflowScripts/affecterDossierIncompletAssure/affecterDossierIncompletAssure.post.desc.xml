@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>affecterDossierIncompletAssure</shortname>
+    <description>affecterDossierIncompletAssure</description>
+    <url>/com/addinn/post/affecterDossierIncompletAssure</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+ </webscript>
+ 

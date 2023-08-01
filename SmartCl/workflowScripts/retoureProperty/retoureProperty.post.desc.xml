@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>retoureProperty</shortname>
+    <description>retoureProperty</description>
+    <url>/com/addinn/post/retoureProperty</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+ </webscript>
+ 

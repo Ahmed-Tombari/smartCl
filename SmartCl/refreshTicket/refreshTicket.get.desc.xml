@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>refreshTicket</shortname>
+   <description>refreshTicket</description>
+   <url>/com/addinn/get/refreshTicket</url>
+   <format default="json"></format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

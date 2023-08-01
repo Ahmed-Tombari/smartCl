@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>restaurationAgent</shortname>
+   <description>restaurationAgent</description>
+   <url>/com/addinn/post/restaurationAgent</url>
+   <format default="json"></format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

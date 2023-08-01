@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>valider Constat</shortname>
+    <description>valider Constat</description>
+    <url>/com/addinn/post/validerConstat</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+ </webscript>
+ 

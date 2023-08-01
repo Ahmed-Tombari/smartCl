@@ -1,0 +1,13 @@
+<webscript>
+    <shortname>decision constat numerique</shortname>
+    <description>Dans cette webscript l'agent prend la decision de generation du constat:
+        - complet
+        - incomplet
+        - invalid
+    </description>
+    <url>/com/addinn/post/decisionConstatNumerique</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+</webscript>
+ 

@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>afficher la liste des dossiers affecté</shortname>
+    <description>afficher la liste des dossiers affecter à un agent par l'administrateur systeme</description>
+    <url>/com/addinn/getListeDossier/Agent</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+    
+ </webscript>

@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>genereConstatAmiable</shortname>
+   <description>genereConstatAmiable</description>
+   <url>/com/addinn/post/genereConstatAmiable</url>
+   <format default="json"></format>
+  <authentication runas="admin">none</authentication>
+   <transaction>required</transaction>
+</webscript>

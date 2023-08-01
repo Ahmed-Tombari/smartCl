@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>deleteAgent</shortname>
+   <description>deleteAgent</description>
+   <url>/com/addinn/delete/deleteAgent</url>
+   <format default="json"></format>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

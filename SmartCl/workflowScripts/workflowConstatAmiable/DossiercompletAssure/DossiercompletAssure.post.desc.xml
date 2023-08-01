@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>Assure Remplire Les Lnformation Manquantes</shortname>
+    <description>assure Remplire Les Information Manquantes</description>
+    <url>/com/addinn/post/DossiercompletAssure</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+ </webscript>
+ 

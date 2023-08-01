@@ -1,0 +1,9 @@
+<webscript>
+    <shortname>declaration dossier assure</shortname>
+    <description>creation du dossier sinistre</description>
+    <url>/com/addinn/creationdossierassure/creationDossier</url>
+    <format default="json"></format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+    
+ </webscript>
